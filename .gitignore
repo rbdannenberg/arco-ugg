@@ -1,6 +1,22 @@
 # Prerequisites
 *.d
 
+# not source
+uggbackup/
+ugg/src/code/
+__pycache__/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Debug/
+Release/
+*.build/
+cmake_install.cmake
+
+# MacOS X
+*.DS_Store
+*.xcodeproj/
+
 # Compiled Object files
 *.slo
 *.lo

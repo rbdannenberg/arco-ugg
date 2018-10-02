@@ -1,8 +1,0 @@
-Notes for Demo for ICMC
-------
-
-Notes = [166 220 247.5 185.625]
-left = Reduce(Add Map(Wave:Saw Notes)) / 8
-right = Reduce(Add Map(f => Wave:Saw(f + 2) Notes)) / 8
-
-Hear({ (left right) })
