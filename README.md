@@ -8,6 +8,8 @@ Try this:
 
 Use CMake in `ugg/src/framework` to generate a project file.
 
+Be sure to set `PORTAUDIO_LIB` and `PORTAUDIO_INCLUDE` variables in CMake.
+
 Compile the project (`uggtest`)
 
 Subdirectories:
