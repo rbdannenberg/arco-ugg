@@ -5,6 +5,8 @@ cmake_minimum_required(VERSION 2.6)
 project(uggtest)
 
 set(UGG_FILES ugen.cpp ugen.h)
+set(PORTAUDIO_INCLUDE " " CACHE PATH "where to find portaudio.h")
+set(PORTAUDIO_LIB " " CACHE FILEPATH "full path of the portaudio library")
 
 add_subdirectory(../code code)
 
@@ -32,11 +34,11 @@ if(UNIX)
 endif(UNIX)
 
 include_directories(../code
-                    ../../../../nyquist/portaudio/include)
+                    ${PORTAUDIO_INCLUDE})
 link_directories("${PROJECT_SOURCE_DIR}/code")
 add_executable(uggtest uggtest.cpp ${UGG_FILES})
 target_link_libraries(uggtest
         ugens_static
-        /Users/rbd/nyquist/Release/libportaudio_static.a
+        ${PORTAUDIO_LIB}
         ${EXTRA_PA_LIBS})
 
