@@ -59,7 +59,7 @@ def error(*args):
     get_a_stack_trace()
 
 
-CODE_PATH = "code/"
+CODE_PATH = "../code/"
 
 def ug_indent(depth):
     if depth == 1:
@@ -603,6 +603,11 @@ class Upow (Ufn2):
 class Uabs (Uunary):
     def __init__(self, param):
         super().__init__("fabs", param)
+
+
+class Utanh (Uunary):
+    def __init__(self, param):
+        super().__init__("tanh", param)
 
 
 # The idea here was to generate both AR and BR versions

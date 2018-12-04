@@ -107,7 +107,8 @@ typedef class Instr_template : public Instr {
     Instr_template() { msgs = last = NULL; }
     ~Instr_template();
     Instr_ptr instantiate(Engine_ptr eng);
-    void add(o2_message_ptr msg, Engine_ptr eng);
+    void add(o2_message_ptr msg, char *types,
+             char *data, Engine_ptr eng);
 } *Instr_template_ptr;
 
 typedef class Input : public Ugen {
